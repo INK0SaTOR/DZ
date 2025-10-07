@@ -18,7 +18,7 @@ int sumchis(int n){
 int main()
 {
     int maximum = 0;
-    int minimum = 0;
+    int minimum = INT_MAX;
     int casech;
     int new_num;
     while (true){
@@ -31,11 +31,15 @@ int main()
             if (sumchis(new_num) > maximum){
                 maximum = sumchis(new_num);
             }
-            else if (sumchis(new_num) < maximum && sumchis(new_num) > minimum) {
+            if (sumchis(new_num) < minimum) {
                 minimum = sumchis(new_num);
+
             }
             break;
         case 2:
+            if (minimum > maximum) {
+                minimum = 0;
+            }
             cout << "Max sum = " << maximum << " min sum = " << minimum << endl;
             return 0;
         default:
