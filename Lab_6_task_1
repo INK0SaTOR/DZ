@@ -9,7 +9,7 @@ int main() {
     cin >> n;
     ofstream outFile("file.txt");
     if (!outFile) {
-        cerr << "File open error" << endl;
+        cout << "File open error" << endl;
         return 1;
     }
     cout << "filling file with numbers... " << endl;
@@ -23,7 +23,7 @@ int main() {
     cin >> m;
     ifstream inFile("file.txt");
     if (!inFile) {
-        cerr << "File open error" << endl;
+        cout << "File open error" << endl;
         return 1;
     }
     cout << "First numbers:" << endl;
