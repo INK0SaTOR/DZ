@@ -12,6 +12,7 @@ int main() {
         cout << "File open error" << endl;
         return 1;
     }
+    
     cout << "filling file with numbers... " << endl;
     for (int i = 1; i <= n; ++i) {
         outFile << 2 * i;
