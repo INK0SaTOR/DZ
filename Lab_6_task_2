@@ -28,7 +28,7 @@ int main() {
         return 1;
     }
 
-    cout << "Pipiska" << endl;
+    cout << "Even numbers:" << endl;
     int number;
     int env_nums;
     int count = 0;
@@ -39,7 +39,7 @@ int main() {
             }
         ++count;
     }
-    cout << env_nums << endl;
+    cout <<"Summ of even numbers: "<< env_nums << endl;
     inFile.close();
 
     if (count == 0) {
