@@ -30,7 +30,7 @@ int main() {
 
     cout << "Even numbers:" << endl;
     int number;
-    int env_nums;
+    int env_nums = 0;
     int count = 0;
     while (inFile >> number && count < n) {
             if (number%2==0){
