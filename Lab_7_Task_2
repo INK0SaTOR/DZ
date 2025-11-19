@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+void TrianglePloshad(double* side, double* height, double* area) {
+    *area = (*side * *height)/2;
+}
+
+int main() {
+    double side, height, area;
+
+    cout << "Введите длину стороны треугольника: ";
+    cin >> side;
+    cout << "Введите высоту треугольника: ";
+    cin >> height;
+
+    calculateTriangleArea(&side, &height, &area);
+
+    cout << "Площадь треугольника: " << area << endl;
+
+    return 0;
+}
