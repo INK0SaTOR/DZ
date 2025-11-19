@@ -12,7 +12,7 @@ int main() {
     cout << "Visota treugolnika: ";
     cin >> height;
 
-    calculateTriangleArea(&side, &height, &area);
+    TrianglePloshad(&side, &height, &area);
 
     cout << "Ploshad treugolnika: " << area << endl;
 
