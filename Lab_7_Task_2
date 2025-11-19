@@ -7,14 +7,14 @@ void TrianglePloshad(double* side, double* height, double* area) {
 int main() {
     double side, height, area;
 
-    cout << "Введите длину стороны треугольника: ";
+    cout << "Dlinna treugolnika: ";
     cin >> side;
-    cout << "Введите высоту треугольника: ";
+    cout << "Visota treugolnika: ";
     cin >> height;
 
     calculateTriangleArea(&side, &height, &area);
 
-    cout << "Площадь треугольника: " << area << endl;
+    cout << "Ploshad treugolnika: " << area << endl;
 
     return 0;
 }
