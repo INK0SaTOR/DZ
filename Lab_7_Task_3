@@ -18,7 +18,7 @@ int main() {
     int& maxomum = max3(x, y, z);
     double a = (x + y + z) / 3.0;
 
-    maxomum = static_cast<int>(average);
+    maxomum = static_cast<int>(a);
 
     cout << "Znacheniya: " << x << " " << y << " " << z <<endl;
 
