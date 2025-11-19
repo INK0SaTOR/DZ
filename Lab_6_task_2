@@ -12,11 +12,6 @@ int main() {
         cerr << "File open error" << endl;
         return 1;
     }
-    cout << "filling file with numbers... " << endl;
-    for (int i = 1; i <= n; ++i) {
-        outFile << i;
-        if (i < n) outFile << " ";
-    }
     outFile.close();
 
 
