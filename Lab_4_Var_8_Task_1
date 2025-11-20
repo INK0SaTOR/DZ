@@ -7,7 +7,7 @@ int main()
 {
 	int n;
 	cin >> n;
-	cout << "введите количество чисел в векторе" << endl;
+	cout << "enter number of numbers in vector" << endl;
 	vector <int> vac;
 
 	for (int i = 0; i <= n; i++)
