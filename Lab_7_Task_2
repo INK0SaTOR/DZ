@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
-void TrianglePloshad(double* side, double* height, double* area) {
-    *area = (*side * *height)/2;
+void TrianglePloshad(double* side, double* height) {
+    return area = (*side * *height)/2;
 }
 
 int main() {
