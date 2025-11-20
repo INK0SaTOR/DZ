@@ -5,15 +5,15 @@ using namespace std;
 int main() 
 {  
     int n;  
-    cout << "Введите количество элементов в массиве: ";
+    cout << "Enter number of elements: ";
     cin >> n;
     if (n <= 0) 
     {
-        cout << "Количество элементов должно быть положительным!" << endl;
+        cout << "Number of elements must be positive" << endl;
         return 1;
     }
     vector <int> arr(n);
-    cout << "Введите элементы массива: ";
+    cout << "Enter elements: ";
     for (int i = 0; i < n; ++i) 
     {
         cin >> arr[i];
@@ -38,11 +38,11 @@ int main()
             counts.push_back(1); 
         }
     }
-    cout << "\nРезультаты:\n";
-    cout << "Количество различных элементов: " << uniqueElements.size() << endl;
-    cout << "Элементы и их количество:\n";
+    cout << "\nResults: \n";
+    cout << "Number of different elements: " << uniqueElements.size() << endl;
+    cout << "Elements and numbers:\n";
     for (size_t i = 0; i < uniqueElements.size(); ++i) 
     {
-        cout << "Элемент " << uniqueElements[i] << " встречается " << counts[i] << " раз" << endl;
+        cout << "Element " << uniqueElements[i] << " counts " << counts[i] << " times" << endl;
     }
     return 0;
