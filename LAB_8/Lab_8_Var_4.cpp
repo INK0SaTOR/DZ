@@ -6,46 +6,42 @@
 
 using namespace std;
 
-// Функция для получения случайного числа в интервале [a, b]
 int get_from_interval(int a, int b) {
-    return rand() % (b - a + 1) + a; // Генерируем случайное число
+    return rand() % (b - a + 1) + a;
 }
 
-// Функция для вывода матрицы на экран
 void echo_matrix(int**& matrix, int n) {
-    for (int i = 0; i < n; i++) { // Проходим по строкам матрицы
-        for (int j = 0; j < n; j++) { // Проходим по столбцам матрицы
-            cout << matrix[i][j] << ' '; // Выводим элемент матрицы
+    for (int i = 0; i < n; i++) { 
+        for (int j = 0; j < n; j++) {
+            cout << matrix[i][j] << ' ';
         }
         cout << endl;
     }
 }
 
-// Функция для заполнения матрицы случайными числами в заданном интервале
 int**& fill_matrix(int n, int a, int b) {
-    int*** matrix_ptr = new int**; // Создаем указатель на указатель на указатель (для динамической матрицы)
-    *matrix_ptr = new int*[n]; // Выделяем память для массива указателей на строки
+    int*** matrix_ptr = new int**;
+    *matrix_ptr = new int*[n];
 
-    for(int i = 0; i < n; i++) { // Проходим по строкам матрицы
-        (*matrix_ptr)[i] = new int[n]; // Выделяем память для каждой строки матрицы
+    for(int i = 0; i < n; i++) {
+        (*matrix_ptr)[i] = new int[n]; 
 
-        for (int j = 0; j < n; j++) { // Проходим по столбцам матрицы
-            (*matrix_ptr)[i][j] = get_from_interval(a, b); // Заполняем элемент случайным числом
+        for (int j = 0; j < n; j++) {
+            (*matrix_ptr)[i][j] = get_from_interval(a, b);
         }
     }
 
-    return *matrix_ptr; // Возвращаем указатель на матрицу
+    return *matrix_ptr;
 }
 
-// Функция для освобождения памяти, занятой матрицей
 void clear_matrix(int**& matrix, int n) {
-    for (int i = 0; i < n; i++) { // Проходим по строкам матрицы
-        delete[] matrix[i]; // Освобождаем память, занятую каждой строкой
+    for (int i = 0; i < n; i++) {
+        delete[] matrix[i]; 
     }
 
-    delete[] matrix; // Освобождаем память, занятую массивом указателей на строки
+    delete[] matrix;
 
-    matrix = nullptr; // Устанавливаем указатель в nullptr для предотвращения утечек памяти
+    matrix = nullptr; 
 }
 
 void draw_green(int**& matrix, int n) {
@@ -67,25 +63,22 @@ void draw_green(int**& matrix, int n) {
     }
 }
 
-// Обнуляет верхний правый треугольник (аналог красной зоны на картинке)
-
-// Основная функция программы
 int main() {
-    srand(time(nullptr)); // Инициализируем генератор случайных чисел текущим временем
+    srand(time(nullptr));
 
-    int n, a, b; // Объявляем переменные для размера матрицы и границ интервала
-    cout << "Enter array size" << endl; // Запрашиваем размер матрицы у пользователя
-    cin >> n; // Считываем размер матрицы
-    cout << "Enter interval for values generation" << endl; // Запрашиваем границы интервала
-    cin >> a >> b; // Считываем границы интервала
+    int n, a, b; 
+    cout << "Enter array size" << endl;
+    cin >> n; 
+    cout << "Enter interval for values generation" << endl; 
+    cin >> a >> b; 
 
-    int**& matrix = fill_matrix(n, a, b); // Заполняем матрицу случайными числами
+    int**& matrix = fill_matrix(n, a, b);
 
-    draw_green(matrix, n); // Модифицируем матрицу, обнуляя определенные элементы
+    draw_green(matrix, n); 
 
     echo_matrix(matrix, n); // Выводим матрицу на экран
 
-    clear_matrix(matrix, n); // Освобождаем память, занятую матрицей
+    clear_matrix(matrix, n);
 
-    return 0; // Завершаем программу
+    return 0; 
 }
