@@ -1,20 +1,24 @@
 #include <iostream>
 #include <vector>
-#include <algorithm>	
+#include <algorithm>
 using namespace std;
+
 
 int main()
 {
-	int n;
+    int n;
+	cout << "vvedi kolichestvo simvolov v vectore" << endl;
 	cin >> n;
-	cout << "enter number of numbers in vector" << endl;
 	vector <int> vac;
+    int vvod;
 
-	for (int i = 0; i <= n; i++)
+	for (int i; i <= n; i++)
 	{
-		vac.push_back(i);
+	    cout << "vvedi novoe chislo ";
+	    cin >> vvod;
+		vac.push_back(vvod);
 	}
-
+    sort(vac.begin(), vac.end());
 	cout << "min = " << vac.front() << endl;
 	cout << "max = " << vac.back() << endl;
 }
