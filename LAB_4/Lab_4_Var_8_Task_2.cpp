@@ -6,19 +6,21 @@ using namespace std;
 int main()
 {
 	int n;
+	cout << "skolko chisel budet v vektore?"<<endl;
 	cin >> n;
 
-	vector <int> vac = { n };
+	vector <int> vac;
 
-	for (int i = 0; i <= n; i++)
+	for (int i = 0; i < n; i++)
 	{
-		vac.push_back(i);
+		int t;
+		cout << "vvedi novoe chislo ";
+		cin>>t;
+		vac.push_back (t);
 	}
 
-	vac.erase(vac.begin());
-
-	cout << "min = " << vac.front() << endl;
-	cout << "max = " << vac.back() << endl;
+	cout << "first = " << vac.front() << endl;
+	cout << "last = " << vac.back() << endl;
 
 	cout << endl;
 
