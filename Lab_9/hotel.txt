@@ -1,0 +1,11 @@
+Ivanov I.I.,22.02.2022,20.08.2025,104A,lukshery,allin
+Surkov Y.A.,23.02.2023,08.12.2025,100A,solo_room,utrennee
+Darkov Y.A.,24.02.2023,08.12.2025,100A,two_person,utrennee
+Dunkan Y.A.,25.02.2023,08.12.2025,100A,three_person,utrennee
+Nonamov Y.A.,25.02.2023,08.12.2025,100A,apartments,utrennee
+Rupert Super Mal Gnidovski Jr ,25.02.2023,08.12.2025,100A,apartments,utrennee
+Adov Y.A.,23.02.2023,08.12.2025,100A,lukshery,utrennee
+Vodov Y.A.,23.02.2023,08.12.2025,100A,solo_room,utrennee
+Vonavi Y.A.,23.02.2023,08.12.2025,100A,solo_room,utrennee
+Mnkoloso Y.A.,23.02.2023,08.12.2025,100A,solo_room,utrennee
+Hehehehe Y.A.,23.02.2023,08.12.2025,100A,solo_room,utrennee
