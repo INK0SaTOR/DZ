@@ -38,7 +38,7 @@ int main()
             counts.push_back(1); 
         }
     }
-    cout << "\nResults: \n";
+    cout << "Results: "<<endl;
     cout << "Number of different elements: " << uniqueElements.size() << endl;
     cout << "Elements and numbers:\n";
     for (size_t i = 0; i < uniqueElements.size(); ++i) 
