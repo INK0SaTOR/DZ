@@ -21,12 +21,12 @@ enum class Eda {
 };
 
 struct gostinica {
-    string FIO;               // ФИО гостя
-    string data_priezda;     // Дата приезда
-    string data_otezda;      // Дата отъезда
-    string nomer;             // Номер комнаты
-    Razmesheniye komnata;    // Тип размещения
-    Eda pitaniye;            // Тип питания
+    string FIO;
+    string data_priezda;
+    string data_otezda;
+    string nomer;
+    Razmesheniye komnata;
+    Eda pitaniye;
 };
 
 gostinica* readHotelsFromFile(const string& filename, int& n) {
@@ -48,7 +48,7 @@ gostinica* readHotelsFromFile(const string& filename, int& n) {
         getline(ss, hotel.data_otezda, ',');
         getline(ss, hotel.nomer, ',');
         getline(ss, komnata_str, ',');
-        getline(ss, pitaniye_str); // Последнее значение до конца строки
+        getline(ss, pitaniye_str);
 
         // Присваиваем значения в зависимости от строковых представлений
         if (komnata_str == "lukshery") hotel.komnata = Razmesheniye::lukshery;
@@ -69,7 +69,7 @@ gostinica* readHotelsFromFile(const string& filename, int& n) {
     // Проверка на количество строк
     if (n < 11) {
         cerr << "Ошибка: в файле должно быть не менее 11 строк!" << endl;
-        return nullptr; // Возвращаем nullptr при недостаточном количестве строк
+        return 0;
     }
 
     gostinica* hotels_array = new gostinica[n]; // Создаем массив гостиниц
